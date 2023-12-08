@@ -4,7 +4,7 @@ import {CustomNavbar} from './HeaderStyle'
 
 const Header = () => {
   return (
-    <CustomNavbar className="navbar navbar-expand-lg py-3 sticky-top">
+    <CustomNavbar className="navbar navbar-expand-lg py-3 sticky-top border-bottom">
   <div className="container">
     <Link className="navbar-brand d-flex align-items-center gap-2 fs-3" to='/'><GiBookAura />BookGarden</Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bookGardenNavbar" aria-controls="bookGardenNavbar" aria-expanded="false" aria-label="Toggle navigation">
