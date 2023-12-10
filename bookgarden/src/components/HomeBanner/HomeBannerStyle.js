@@ -5,6 +5,11 @@ export const CustomBanner = styled.section `
   h3 {
     color: #C8888B;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+  }
+
+  h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
 `;
