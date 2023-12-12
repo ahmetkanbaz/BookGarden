@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 
+import FormButtons from "./FormButtons/FormButtons";
 import TitleProduction from "./TitleProduction/TitleProduction";
 
 const AddBookForm = ({
@@ -19,6 +20,10 @@ const AddBookForm = ({
         handleBlur={handleBlur}
         values={values}
         isSubmitting={isSubmitting}
+      />
+      
+      <FormButtons
+        handleReset = {handleReset}
       />
     </form>
   );
