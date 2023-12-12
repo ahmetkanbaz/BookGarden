@@ -24,8 +24,8 @@ const AddBook = () => {
       imageSrc: "",
       src: "",
     },
-    onSubmit: async (values, bag) => {
-      await console.log(values);
+    onSubmit: (values, bag) => {
+      console.log(values);
       bag.setSubmitting(false);
       // bag.resetForm()
     },

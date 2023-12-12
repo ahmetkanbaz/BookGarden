@@ -26,6 +26,24 @@ const TitleProduction = ({
           />
         </div>
       </div>
+      <div className="col-md-6">
+        <div className="mb-3">
+          <label htmlFor="production" className="form-label">
+            Book Publishing House
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="production"
+            name="production"
+            placeholder="Enter the book publishing house..."
+            value={values.production}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            disabled={isSubmitting}
+          />
+        </div>
+      </div>
     </div>
   );
 };

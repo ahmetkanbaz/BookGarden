@@ -21,10 +21,8 @@ const AddBookForm = ({
         values={values}
         isSubmitting={isSubmitting}
       />
-      
-      <FormButtons
-        handleReset = {handleReset}
-      />
+
+      <FormButtons handleReset={handleReset} />
     </form>
   );
 };

@@ -5,5 +5,11 @@ export const CustomButton = styled.button `
   background-color: ${({backgroundcolor}) => backgroundcolor};
   border-radius: ${({borderradius}) => borderradius};
   border: ${({bordervalue}) => bordervalue};
+  color: ${({textcolor}) => textcolor};
   padding: ${({buttonpadding}) => buttonpadding};
+  font-size: ${({textfontsize}) => textfontsize};
+  &:hover {
+    background-color: ${({hoverbackgroundcolor}) => hoverbackgroundcolor};
+    color: ${({hovertextcolor}) => hovertextcolor};
+  }
 `;
