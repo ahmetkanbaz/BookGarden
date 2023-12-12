@@ -1,5 +1,3 @@
-import { getAllBooks } from "../../../utils/requests";
-
 const HomeBannerInfos = () => {
   return (
     <div className="col-lg-6">
@@ -11,7 +9,6 @@ const HomeBannerInfos = () => {
         Make the wisest investment in yourself with Book Garden – where the
         loyalty of a good book awaits!
       </p>
-      <button onClick={() => getAllBooks()}>Kitaplar</button>
     </div>
   );
 };
