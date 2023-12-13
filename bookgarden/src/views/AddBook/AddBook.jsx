@@ -2,6 +2,7 @@ import { useFormik } from "formik";
 import UpperSection from "../../common/UpperSection/UpperSection";
 import TitleProduction from "../../components/AddBookForm/TitleProduction/TitleProduction";
 import AddBookForm from "../../components/AddBookForm/AddBookForm";
+import { addNewBook } from "../../utils/posts";
 
 const AddBook = () => {
   const {
@@ -24,8 +25,9 @@ const AddBook = () => {
       imageSrc: "",
       src: "",
     },
-    onSubmit: (values, bag) => {
-      console.log(values);
+    onSubmit: async (values, bag) => {
+      const response = await addNewBook(values)
+      console.log(response)
       bag.setSubmitting(false);
       // bag.resetForm()
     },
