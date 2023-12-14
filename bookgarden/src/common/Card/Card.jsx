@@ -13,7 +13,7 @@ const Card = ({ movie }) => {
   return (
     <div className="col-lg-2 col-md-3 col-sm-4 col-6">
       <CustomCard className="card h-100 rounded-2 position-relative">
-        <div onClick={() => navigate(`allbooks/${id}`)}>
+        <div onClick={() => navigate(`/allbooks/${id}`)}>
           <img src={imageSrc} className="card-img-top rounded-top-2" alt={title} />
           <div className="card-body">
             <h5 className="card-title">{title}</h5>
