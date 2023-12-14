@@ -8,7 +8,9 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: #F5F5F5;
+    background-color: ${({theme}) => theme == 'light' ? '#F5F5F5' : '#333333'};
+    color: ${({theme}) => theme == 'light' ? '#000000' : '#F5F5F5'};
+    transition: all .3s ease-in-out;
   }
 
   a {

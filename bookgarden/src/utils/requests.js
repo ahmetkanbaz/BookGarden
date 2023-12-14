@@ -17,3 +17,14 @@ export const getAllBooks = () => async (dispatch) => {
     dispatch(setError(error.message))
   }
 };
+
+
+export const getSingleBook = async (id) => {
+  try {
+    const response = await axios.get(`${baseUrl}/books/${id}`)
+    return response.data
+  }
+  catch (error) {
+    return error
+  }
+}
