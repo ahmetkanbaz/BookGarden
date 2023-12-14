@@ -13,15 +13,26 @@ const AllBooks = () => {
 
   const [search, setSearch] = useState()
   const [sort, setSort] = useState()
+
   useEffect(() => {
     dispatch(getAllBooks())
   }, [])
+
+  useEffect(() => {
+    let tempBooks = [...books]
+
+    if (search) {
+      tempBooks = tempBooks.filter((book) => book.title.toLowerCase().includes(search.toLowerCase().trim()))
+    }
+
+    setFilteredBooks(tempBooks)
+  }, [search])
   return (
     <section className="py-5">
       <div className="container">
         <UpperSection title="All Books" />
-        <FilterItems />
-        <BooksWrapper books={books} />
+        <FilterItems setSearch = {setSearch} />
+        <BooksWrapper books={filteredBooks} />
       </div>
     </section>
   );

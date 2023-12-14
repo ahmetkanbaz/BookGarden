@@ -1,4 +1,9 @@
-const FilterItems = () => {
+/* eslint-disable react/prop-types */
+const FilterItems = ({setSearch}) => {
+
+  const handleSearchBook = (e) => {
+    setSearch(e.target.value)
+  }
   return (
     <div className="pb-5">
       <div className="container">
@@ -31,6 +36,7 @@ const FilterItems = () => {
               type="text"
               className="form-control rounded-pill"
               placeholder="Search by book name..."
+              onChange={(e) => handleSearchBook(e)}
             />
           </div>
         </div>
