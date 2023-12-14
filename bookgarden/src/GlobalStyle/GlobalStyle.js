@@ -16,18 +16,20 @@ export const GlobalStyle = createGlobalStyle`
     transition: all .3s ease-in-out;
   }
 
-  .nav-link {
-    /* color: ${({ theme }) => (theme == "light" ? "#000000" : "#F5F5F5")}; */
+  .nav-link,
+  .nav-link > svg {
+    color: ${({ theme }) => (theme == "light" ? "#000000" : "#F5F5F5")};
     transition: all .3s ease-in-out;
   }
 
-  .nav-link:hover {
+  .nav-link:hover,
+  .nav-link > svg:hover {
     color: #BA49FF;
   }
 
   .form-control {
-    /* background-color: ${({ theme }) =>
-      theme == "light" ? "#F0F0F0" : "#3E3E3E"}; */
+    background-color: ${({ theme }) =>
+      theme == "light" ? "#F0F0F0" : "#3E3E3E"};
     transition: all .3s ease-in-out;
     &:focus {
       box-shadow: none;
@@ -36,7 +38,7 @@ export const GlobalStyle = createGlobalStyle`
     &::placeholder {
       font-size: .89rem;
       font-style: italic;
-      /* color: ${({ theme }) => (theme == "light" ? "#101010" : "#E0E0E0")}; */
+      color: ${({ theme }) => (theme == "light" ? "#101010" : "#E0E0E0")};
       transition: all .3s ease-in-out;
     }
   }
