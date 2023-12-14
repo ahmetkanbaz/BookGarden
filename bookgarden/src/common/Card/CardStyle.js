@@ -10,9 +10,9 @@ export const CustomCard = styled.div`
     background-color: yellow;
   }
   img {
-    height: 150px;
+    height: 250px;
   }
-  h2 {
+  h5 {
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
