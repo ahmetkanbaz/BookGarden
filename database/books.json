@@ -1,0 +1,26 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Paranın Psikolojisi",
+      "production": "Scala Yayıncılık",
+      "author": "Morgan Housel",
+      "summary": "Para konusunda başarılı olmak, mutlaka bilgiyle ve bilgili olmakla ilgili bir mesele değildir. Nasıl davrandığınızla ilgilidir. Üstelik davranışı öğretmek zordur; gerçekten zeki insanlara bile. Para yönetimi, yatırım ve kurumsal karar alma süreçlerinin genelde çok sayıda matematik hesabı içerdiği, ne yapacağınızı net bir biçimde ortaya koyan veriler ve formüller temelinde hareket etmeyi gerektirdiği düşünülür. Fakat gerçek dünyada insanlar finansla ilgili kararlar alırken sadece tablolara bakmaz. Finansal kararlar genellikle sofrada veya bir toplantı odasında, kişinin kendi hayat hikâyesinin, ona özgü dünya görüşünün, egonun, kibirin, pazarlamanın ve bazı tuhaf motivasyon unsurlarının bir araya geldiği ortamlarda alınır. Ödüllü yazar Morgan Housel Paranın Psikolojisi’nde, insanların paraya ilişkin düşünce biçimlerini ele alan 19 kısa hikâyeye yer veriyor ve hayatın en önemli yönlerinden biri olan para konusunu nasıl daha iyi anlayabileceğimize dair önemli dersler sunuyor.",
+      "date": "17/03/2022",
+      "price": 240,
+      "imageSrc": "https://img.kitapyurdu.com/v1/getImage/fn:11477632/wh:true/wi:220",
+      "src": "https://www.kitapyurdu.com/kitap/paranin-psikolojisi/598866.html"
+    },
+    {
+      "title": "Gece Yarısı Kütüphanesi",
+      "production": "Domingo Yayınevi",
+      "author": "Matt Haig",
+      "summary": "42 Dile Çevrilen Uluslararası Çoksatan\n\n2020 Goodreads Yılın En İyi Romanı\n\n“Yaşamla ölüm arasında bir kütüphane var,” dedi. “Bu kütüphanedeki raflar sonsuza kadar gider.  Her kitap yaşamış olabileceğin başka bir hayatı yaşama şansını sunar sana. Farklı seçimler yapmış olsan, şu an nasıl bir hayatın olacağını görürsün…\nPişmanlıklarını telafi etme şansın olsaydı, bazı konularda farklı davranır mıydın?”\n\nNora Seed berbat halde. Kedisi öldü. İşinden kovuldu. Abisi onunla konuşmuyor. Kimsenin ona ihtiyacı yok. Art arda alınmış kötü kararların sonucunda bir kütüphanede buluyor kendini. Zamanın hiç akmadığı bir gece yarısı kütüphanesinde, sonsuz sayıda kitabın ortasında... Kitapların her birinde Nora’nın farklı bir hayatı yazılı. Başka kararlar verseydi yaşamış olabileceği hayatlar.\n\nFarklı kariyerler, farklı eşler, farklı arkadaşlar, farklı şehirler arasında gidip gelen Nora’nın aklı sorularla doluyor. Mutluluk sadece önemli sandığımız seçimlerde mi gizli? Yanlış giden her detayın sorumlusu gerçekten biz miyiz? Hayatı yaşanılır kılan ne? Yanlış bir karar insanın tüm hayatına mal olabilir mi?\n\nİngiliz edebiyatının önemli isimlerinden Matt Haig; Nora’nın pişmanlıklara, ihtimallere ve yeniden seçme imkânına dair çıktığı bu yolculukta, ona eşlik edecek okurlara sürükleyici ve insanın en temel sorunlarını konu alan bir kurgu sunuyor.\n\n“Değişmesini istediğimiz bir dünyada hep birlikte sıkışıp  kalmışken, tam zamanında yazılmış bir modern çağ masalı, günümüzün Şahane Hayat’ı.”\nJodi Picoult\n\n“Kitapların yaşamı değiştirme gücünü kutlayan, içtenlikle ve mizahla yazılmış, baştan çıkarıcı bir roman.”\nSunday Times\n\n“Matt Haig sözcükleri konserve açacağı gibi kullanıyor. Konserve de biziz.”\nJeanette Winterson",
+      "date": "2021-01-01",
+      "price": 99,
+      "imageSrc": "https://i.dr.com.tr/cache/500x400-0/originals/0001922926001-1.jpg",
+      "src": "https://www.dr.com.tr/kitap/gece-yarisi-kutuphanesi/edebiyat/roman/dunya-roman/urunno=0001922926001",
+      "id": 2
+    }
+  ]
+}
