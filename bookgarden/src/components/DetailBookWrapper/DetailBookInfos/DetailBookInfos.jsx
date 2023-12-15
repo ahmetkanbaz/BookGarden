@@ -7,6 +7,14 @@ const DetailBookInfos = ({ date, title, summary, production, src }) => {
     month: "numeric",
     year: "numeric",
   });
+
+  const styleButton = {
+    bordervalue: '1px solid #333333',
+    buttonClassName: 'rounded-pill',
+    textcolor: '#FFFFFF',
+    buttonpadding: '.5rem 1.5rem',
+    buttonType: 'button'
+  }
   return (
     <div className="col-md-8 col-12">
       {date && (
@@ -31,18 +39,23 @@ const DetailBookInfos = ({ date, title, summary, production, src }) => {
       )}
 
       {src && (
-        <div className="d-flex justify-content-md-end justify-content-center">
+        <div className="d-flex justify-content-around">
           <Button
             title="Go to Site"
             backgroundcolor="#C27B7F"
-            borderradius="12px"
-            bordervalue="none"
-            textcolor="#FFFFFF"
-            buttonpadding=".63rem 1.8rem"
             hoverbackgroundcolor="#C47562"
             buttonOnClick={() => window.open(src, "_blank")}
-            buttonType="button"
-          ></Button>
+            {...styleButton}
+          />
+          <Button
+            backgroundcolor="#FFA192"
+            hoverbackgroundcolor='#FF7F6B'
+            textcolor="#FFFFFF"
+            title="Update Book"
+            dataBsToggle="modal"
+            dataBsTarget="#updateBookModal"
+            {...styleButton}
+          />
         </div>
       )}
     </div>

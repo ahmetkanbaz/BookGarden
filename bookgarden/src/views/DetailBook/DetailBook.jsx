@@ -5,6 +5,7 @@ import Loading from "../../common/Loading/Loading";
 import DangerAlert from "../../common/DangerAlert/DangerAlert";
 import DetailBookImage from "../../components/DetailBookWrapper/DetailBookImage/DetailBookImage";
 import DetailBookInfos from "../../components/DetailBookWrapper/DetailBookInfos/DetailBookInfos";
+import UpdateModal from "../../components/UpdateModal/UpdateModal";
 
 const DetailBook = () => {
   const { id } = useParams();
@@ -40,7 +41,7 @@ const DetailBook = () => {
     <section className="py-5">
       <div className="container">
         <div className="row mt-4">
-          <DetailBookImage imageSrc={imageSrc} title={title} author={author}/>
+          <DetailBookImage imageSrc={imageSrc} title={title} author={author} />
           <DetailBookInfos
             date={date}
             title={title}
@@ -49,6 +50,7 @@ const DetailBook = () => {
             production={production}
           />
         </div>
+        <UpdateModal book={singleBook} />
       </div>
     </section>
   );

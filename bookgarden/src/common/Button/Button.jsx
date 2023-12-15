@@ -15,6 +15,8 @@ const Button = ({
   buttonClassName,
   buttonOnClick,
   buttonType,
+  dataBsToggle,
+  dataBsTarget
 }) => {
   return (
     <CustomButton
@@ -29,6 +31,8 @@ const Button = ({
       hovertextcolor={hovertextcolor}
       onClick={buttonOnClick}
       type={buttonType}
+      data-bs-toggle = {dataBsToggle}
+      data-bs-target = {dataBsTarget}
     >
       {title}
     </CustomButton>
