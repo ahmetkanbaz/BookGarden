@@ -4,6 +4,7 @@ import UpperSection from '../../common/UpperSection/UpperSection'
 import BooksWrapper from "../../common/BooksWrapper/BooksWrapper";
 import {useEffect} from 'react'
 import { getAllBooks } from "../../utils/requests";
+import AboutAuthor from "../../components/AboutAuthor/AboutAuthor";
 
 const Home = () => {
   const dispatch = useDispatch()
@@ -24,6 +25,7 @@ const Home = () => {
           <BooksWrapper books={latestBooks} />
         </div>
       </section>
+      <AboutAuthor />
     </>
   );
 };
