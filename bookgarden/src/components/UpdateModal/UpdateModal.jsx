@@ -1,11 +1,41 @@
 /* eslint-disable react/prop-types */
 import { UpdateModalWrapper } from "./UpdateModalStyle";
 import { useSelector } from "react-redux";
+import { useFormik } from "formik";
+import UpdateTitleProduction from "./UpdateTitleProduction/UpdateTitleProduction";
+import UpdateAuthorDatePrice from "./UpdateAuthorDatePrice/UpdateAuthorDatePrice";
+import SummaryTargetImageSrc from "./SummaryTargetImageSrc/SummaryTargetImageSrc";
 
 const UpdateModal = ({ book }) => {
   const theme = useSelector((state) => state.theme.theme);
-  const { title, production, summary, date, author, price, imageSrc, src } =
+  const { id, title, production, summary, date, author, price, imageSrc, src } =
     book || {};
+
+  const {
+    handleSubmit,
+    handleChange,
+    handleBlur,
+    handleReset,
+    values,
+    errors,
+    touched,
+    isSubmitting,
+  } = useFormik({
+    initialValues: {
+      title,
+      production,
+      summary,
+      author,
+      date,
+      price,
+      imageSrc,
+      src,
+    },
+    onSubmit: (values, bag) => {
+      console.log(values);
+      bag.setSubmitting(false);
+    },
+  });
 
   return (
     <UpdateModalWrapper theme={theme}>
@@ -29,7 +59,28 @@ const UpdateModal = ({ book }) => {
                 aria-label="Close"
               ></button>
             </div>
-            <div className="modal-body">...</div>
+            <div className="modal-body">
+              <form onSubmit={handleSubmit}>
+                <UpdateTitleProduction
+                  handleChange={handleChange}
+                  handleBlur={handleBlur}
+                  values={values}
+                  isSubmitting={isSubmitting}
+                />
+                <UpdateAuthorDatePrice
+                  handleChange={handleChange}
+                  handleBlur={handleBlur}
+                  values={values}
+                  isSubmitting={isSubmitting}
+                />
+                <SummaryTargetImageSrc
+                  handleChange={handleChange}
+                  handleBlur={handleBlur}
+                  values={values}
+                  isSubmitting={isSubmitting}
+                />
+              </form>
+            </div>
             <div className="modal-footer">
               <button
                 type="button"

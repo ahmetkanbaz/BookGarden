@@ -23,7 +23,7 @@ const DetailBook = () => {
     getBookValues();
   }, []);
 
-  const { title, production, author, summary, date, imageSrc, src } =
+  const { title, production, author, summary, price, date, imageSrc, src } =
     singleBook || {};
 
   if (loading) {
@@ -46,6 +46,7 @@ const DetailBook = () => {
             date={date}
             title={title}
             summary={summary}
+            price={price}
             src={src}
             production={production}
           />

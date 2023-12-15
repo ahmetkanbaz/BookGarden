@@ -1,7 +1,7 @@
 import Button from "../../../common/Button/Button";
 
 /* eslint-disable react/prop-types */
-const DetailBookInfos = ({ date, title, summary, production, src }) => {
+const DetailBookInfos = ({ date, title, summary, price, production, src }) => {
   const formattedDate = new Date(date).toLocaleDateString("tr-TR", {
     day: "numeric",
     month: "numeric",
@@ -9,12 +9,12 @@ const DetailBookInfos = ({ date, title, summary, production, src }) => {
   });
 
   const styleButton = {
-    bordervalue: '1px solid #333333',
-    buttonClassName: 'rounded-pill',
-    textcolor: '#FFFFFF',
-    buttonpadding: '.5rem 1.5rem',
-    buttonType: 'button'
-  }
+    bordervalue: "1px solid #333333",
+    buttonClassName: "rounded-pill",
+    textcolor: "#FFFFFF",
+    buttonpadding: ".5rem 1.5rem",
+    buttonType: "button",
+  };
   return (
     <div className="col-md-8 col-12">
       {date && (
@@ -29,6 +29,12 @@ const DetailBookInfos = ({ date, title, summary, production, src }) => {
           {summary.split("\n").map((line, index) => (
             <p key={index}>{line}</p>
           ))}
+        </div>
+      )}
+
+      {price && (
+        <div className="py-4 d-flex align-items-center justify-content-end">
+          Price: <span className="fs-3 ms-2 fst-italic">{price}</span><span className="fs-4 fst-italic">$</span>
         </div>
       )}
 
@@ -49,7 +55,7 @@ const DetailBookInfos = ({ date, title, summary, production, src }) => {
           />
           <Button
             backgroundcolor="#FFA192"
-            hoverbackgroundcolor='#FF7F6B'
+            hoverbackgroundcolor="#FF7F6B"
             textcolor="#FFFFFF"
             title="Update Book"
             dataBsToggle="modal"
