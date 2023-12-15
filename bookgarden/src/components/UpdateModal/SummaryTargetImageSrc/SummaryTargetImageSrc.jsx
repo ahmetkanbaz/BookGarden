@@ -1,38 +1,64 @@
 /* eslint-disable react/prop-types */
 import FormError from "../../../common/FormError/FormError";
 
-const TargetImageSrc = ({ handleChange, handleBlur, values, isSubmitting, errors, touched }) => {
+const SummaryTargetImageSrc = ({
+  handleChange,
+  handleBlur,
+  values,
+  isSubmitting,
+  errors,
+  touched
+}) => {
   return (
     <div>
       <div className="mb-4 position-relative">
-        <label htmlFor="imageSrc" className="form-label">
-          Book Photo
+        <label htmlFor="summary" className="form-label">
+          Summary
         </label>
-        <input
-          type="text"
-          id="imageSrc"
-          name="imageSrc"
+        <textarea
+          id="summary"
+          name="summary"
+          rows="10"
           className="form-control"
           onChange={handleChange}
           onBlur={handleBlur}
-          value={values.imageSrc}
+          defaultValue={values.summary}
+          disabled={isSubmitting}
+          placeholder="Enter the summary of the book..."
+        />
+        {errors.summary && touched.summary && <FormError message={errors.summary}/>}
+      </div>
+
+      <div className="mb-4 position-relative">
+        <label htmlFor="imageSrc" className="form-label">
+          Photo Link
+        </label>
+        <input
+          type="text"
+          className="form-control"
+          id="imageSrc"
+          name="imageSrc"
+          onChange={handleChange}
+          onBlur={handleBlur}
+          defaultValue={values.imageSrc}
           disabled={isSubmitting}
           placeholder="Enter the photo of the book..."
         />
         {errors.imageSrc && touched.imageSrc && <FormError message={errors.imageSrc}/>}
       </div>
+
       <div className="mb-4 position-relative">
         <label htmlFor="src" className="form-label">
           Book Link
         </label>
         <input
           type="url"
+          className="form-control"
           id="src"
           name="src"
-          className="form-control"
           onChange={handleChange}
           onBlur={handleBlur}
-          value={values.src}
+          defaultValue={values.src}
           disabled={isSubmitting}
           placeholder="Enter the link of the book..."
         />
@@ -42,4 +68,4 @@ const TargetImageSrc = ({ handleChange, handleBlur, values, isSubmitting, errors
   );
 };
 
-export default TargetImageSrc;
+export default SummaryTargetImageSrc;

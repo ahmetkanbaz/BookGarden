@@ -1,15 +1,18 @@
 /* eslint-disable react/prop-types */
+import FormError from "../../../common/FormError/FormError";
 
 const TitleProduction = ({
   handleChange,
   handleBlur,
   values,
   isSubmitting,
+  errors,
+  touched
 }) => {
   return (
     <div className="row align-items-center">
       <div className="col-md-6">
-        <div className="mb-3">
+        <div className="mb-4 position-relative">
           <label htmlFor="title" className="form-label">
             Book Title
           </label>
@@ -24,10 +27,11 @@ const TitleProduction = ({
             onBlur={handleBlur}
             disabled={isSubmitting}
           />
+          {errors.title && touched.title && <FormError message={errors.title}/>}
         </div>
       </div>
       <div className="col-md-6">
-        <div className="mb-3">
+        <div className="mb-4 position-relative">
           <label htmlFor="production" className="form-label">
             Book Publishing House
           </label>
@@ -42,6 +46,7 @@ const TitleProduction = ({
             onBlur={handleBlur}
             disabled={isSubmitting}
           />
+          {errors.production && touched.production && <FormError message={errors.production}/>}
         </div>
       </div>
     </div>

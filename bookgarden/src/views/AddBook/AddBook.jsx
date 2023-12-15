@@ -2,6 +2,7 @@ import { useFormik } from "formik";
 import UpperSection from "../../common/UpperSection/UpperSection";
 import AddBookForm from "../../components/AddBookForm/AddBookForm";
 import { addNewBook } from "../../utils/posts";
+import bookSchema from '../../schemas/bookSchema'
 
 const AddBook = () => {
   const {
@@ -24,6 +25,7 @@ const AddBook = () => {
       imageSrc: "",
       src: "",
     },
+    validationSchema: bookSchema,
     onSubmit: async (values, bag) => {
       const response = await addNewBook(values)
       console.log(response)
