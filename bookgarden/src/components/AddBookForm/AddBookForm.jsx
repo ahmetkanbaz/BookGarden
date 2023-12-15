@@ -3,6 +3,7 @@ import TitleProduction from "./TitleProduction/TitleProduction";
 import AuthorDatePrice from "./AuthorDatePrice/AuthorDatePrice";
 import FormButtons from "./FormButtons/FormButtons";
 import TargetImageSrc from "./TargetImageSrc/TargetImageSrc";
+import FormError from '../../common/FormError/FormError'
 
 const AddBookForm = ({
   handleSubmit,
@@ -21,6 +22,8 @@ const AddBookForm = ({
         handleBlur={handleBlur}
         values={values}
         isSubmitting={isSubmitting}
+        errors = {errors}
+        touched = {touched}
       />
 
       <AuthorDatePrice
@@ -28,9 +31,11 @@ const AddBookForm = ({
         handleBlur={handleBlur}
         values={values}
         isSubmitting={isSubmitting}
+        errors = {errors}
+        touched = {touched}
       />
 
-      <div className="mb-3">
+      <div className="mb-4 position-relative">
         <label htmlFor="summary" className="form-label">
           Summary
         </label>
@@ -45,6 +50,7 @@ const AddBookForm = ({
           placeholder="Enter the summary of the book..."
           disabled={isSubmitting}
         />
+        {errors.summary && touched.summary && <FormError message={errors.summary}/>}
       </div>
 
       <TargetImageSrc
@@ -52,6 +58,8 @@ const AddBookForm = ({
         handleBlur={handleBlur}
         values={values}
         isSubmitting={isSubmitting}
+        errors = {errors}
+        touched = {touched}
       />
 
       <FormButtons handleReset={handleReset} />

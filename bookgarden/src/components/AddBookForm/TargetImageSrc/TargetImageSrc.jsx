@@ -1,8 +1,10 @@
 /* eslint-disable react/prop-types */
-const TargetImageSrc = ({ handleChange, handleBlur, values, isSubmitting }) => {
+import FormError from "../../../common/FormError/FormError";
+
+const TargetImageSrc = ({ handleChange, handleBlur, values, isSubmitting, errors, touched }) => {
   return (
     <div>
-      <div className="mb-3">
+      <div className="mb-4 position-relative">
         <label htmlFor="imageSrc" className="form-label">
           Book Photo
         </label>
@@ -17,8 +19,9 @@ const TargetImageSrc = ({ handleChange, handleBlur, values, isSubmitting }) => {
           disabled={isSubmitting}
           placeholder="Enter the photo of the book..."
         />
+        {errors.imageSrc && touched.imageSrc && <FormError message={errors.imageSrc}/>}
       </div>
-      <div className="mb-3">
+      <div className="mb-4 position-relative">
         <label htmlFor="src" className="form-label">
           Book Link
         </label>
@@ -33,6 +36,7 @@ const TargetImageSrc = ({ handleChange, handleBlur, values, isSubmitting }) => {
           disabled={isSubmitting}
           placeholder="Enter the link of the book..."
         />
+        {errors.src && touched.src && <FormError message={errors.src}/>}
       </div>
     </div>
   );
