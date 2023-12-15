@@ -40,6 +40,23 @@ const SummaryTargetImageSrc = ({
           placeholder="Enter the photo of the book..."
         />
       </div>
+
+      <div className="mb-3">
+        <label htmlFor="src" className="form-label">
+          Book Link
+        </label>
+        <input
+          type="url"
+          className="form-control"
+          id="src"
+          name="src"
+          onChange={handleChange}
+          onBlur={handleBlur}
+          defaultValue={values.src}
+          disabled={isSubmitting}
+          placeholder="Enter the link of the book..."
+        />
+      </div>
     </div>
   );
 };

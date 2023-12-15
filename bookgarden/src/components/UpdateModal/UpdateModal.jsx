@@ -15,7 +15,6 @@ const UpdateModal = ({ book }) => {
     handleSubmit,
     handleChange,
     handleBlur,
-    handleReset,
     values,
     errors,
     touched,
@@ -89,7 +88,12 @@ const UpdateModal = ({ book }) => {
               >
                 Close
               </button>
-              <button type="button" className="btn btn-primary">
+              <button
+                type="submit"
+                onClick={handleSubmit}
+                className="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
                 Save changes
               </button>
             </div>
