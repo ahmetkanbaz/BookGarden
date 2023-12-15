@@ -1,13 +1,17 @@
 /* eslint-disable react/prop-types */
+import FormError from "../../../common/FormError/FormError";
+
 const UpdateAuthorDatePrice = ({
   handleChange,
   handleBlur,
   values,
   isSubmitting,
+  errors,
+  touched
 }) => {
   return (
     <div className="row align-items-center">
-      <div className="col-md-4 mb-3">
+      <div className="col-md-4 mb-4 position-relative">
         <label htmlFor="author" className="form-label">
           Author
         </label>
@@ -22,8 +26,9 @@ const UpdateAuthorDatePrice = ({
           disabled={isSubmitting}
           placeholder="Enter the author of the book..."
         />
+        {errors.author && touched.author && <FormError message={errors.author}/>}
       </div>
-      <div className="col-md-4 mb-3">
+      <div className="col-md-4 mb-4 position-relative">
         <label htmlFor="date" className="form-label">
           Date
         </label>
@@ -38,8 +43,9 @@ const UpdateAuthorDatePrice = ({
           disabled={isSubmitting}
           placeholder="Enter the date of the book..."
         />
+        {errors.date && touched.date && <FormError message={errors.date}/>}
       </div>
-      <div className="col-md-4 mb-3">
+      <div className="col-md-4 mb-4 position-relative">
         <label htmlFor="price" className="form-label">
           Price
         </label>
@@ -54,6 +60,7 @@ const UpdateAuthorDatePrice = ({
           disabled={isSubmitting}
           placeholder="Enter the price of the book..."
         />
+        {errors.price && touched.price && <FormError message={errors.price}/>}
       </div>
     </div>
   );

@@ -7,6 +7,7 @@ import UpdateAuthorDatePrice from "./UpdateAuthorDatePrice/UpdateAuthorDatePrice
 import SummaryTargetImageSrc from "./SummaryTargetImageSrc/SummaryTargetImageSrc";
 import { updateBook } from "../../utils/puts";
 import { useParams } from "react-router-dom";
+import bookSchema from "../../schemas/bookSchema";
 
 const UpdateModal = ({ book, setSingleBook }) => {
   const {id} = useParams()
@@ -33,6 +34,7 @@ const UpdateModal = ({ book, setSingleBook }) => {
       imageSrc,
       src,
     },
+    validationSchema: bookSchema,
     onSubmit: async (values, bag) => {
       const response = await updateBook(id, values)
       if (response.status == 200 || response.status == 201) {
@@ -77,18 +79,24 @@ const UpdateModal = ({ book, setSingleBook }) => {
                   handleBlur={handleBlur}
                   values={values}
                   isSubmitting={isSubmitting}
+                  errors = {errors}
+                  touched = {touched}
                 />
                 <UpdateAuthorDatePrice
                   handleChange={handleChange}
                   handleBlur={handleBlur}
                   values={values}
                   isSubmitting={isSubmitting}
+                  errors = {errors}
+                  touched = {touched}
                 />
                 <SummaryTargetImageSrc
                   handleChange={handleChange}
                   handleBlur={handleBlur}
                   values={values}
                   isSubmitting={isSubmitting}
+                  errors = {errors}
+                  touched = {touched}
                 />
               </form>
             </div>

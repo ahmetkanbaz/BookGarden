@@ -25,8 +25,6 @@ const DetailBook = () => {
 
   const { title, production, author, summary, price, date, imageSrc, src } =
     singleBook || {};
-  
-  console.log(singleBook)
 
   if (loading) {
     return <Loading />;
