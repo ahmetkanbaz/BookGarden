@@ -1,10 +1,10 @@
-import AboutAuthorImage from "./AboutAuthorImage/AboutAuthorImage"
-import AboutAuthorInfos from "./AboutAuthorInfos/AboutAuthorInfos"
-import { AboutAuthorWrapper } from "./AboutAuthorStyle"
-import { useSelector } from "react-redux"
+import AboutAuthorImage from "./AboutAuthorImage/AboutAuthorImage";
+import AboutAuthorInfos from "./AboutAuthorInfos/AboutAuthorInfos";
+import { AboutAuthorWrapper } from "./AboutAuthorStyle";
+import { useSelector } from "react-redux";
 
 const AboutAuthor = () => {
-  const theme = useSelector((state) => state.theme.theme)
+  const theme = useSelector((state) => state.theme.theme);
   return (
     <AboutAuthorWrapper className="py-5" theme={theme}>
       <div className="container">
@@ -16,7 +16,7 @@ const AboutAuthor = () => {
         </div>
       </div>
     </AboutAuthorWrapper>
-  )
-}
+  );
+};
 
-export default AboutAuthor
+export default AboutAuthor;

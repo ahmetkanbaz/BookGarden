@@ -5,6 +5,7 @@ import BooksWrapper from "../../common/BooksWrapper/BooksWrapper";
 import {useEffect} from 'react'
 import { getAllBooks } from "../../utils/requests";
 import AboutAuthor from "../../components/AboutAuthor/AboutAuthor";
+import Blogs from "../../components/Blogs/Blogs";
 
 const Home = () => {
   const dispatch = useDispatch()
@@ -26,6 +27,7 @@ const Home = () => {
         </div>
       </section>
       <AboutAuthor />
+      <Blogs />
     </>
   );
 };
