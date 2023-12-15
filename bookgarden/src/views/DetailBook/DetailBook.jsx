@@ -25,6 +25,8 @@ const DetailBook = () => {
 
   const { title, production, author, summary, price, date, imageSrc, src } =
     singleBook || {};
+  
+  console.log(singleBook)
 
   if (loading) {
     return <Loading />;
@@ -51,7 +53,7 @@ const DetailBook = () => {
             production={production}
           />
         </div>
-        <UpdateModal book={singleBook} />
+        <UpdateModal book={singleBook} setSingleBook = {setSingleBook}/>
       </div>
     </section>
   );

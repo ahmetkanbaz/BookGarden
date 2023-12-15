@@ -5,10 +5,13 @@ import { useFormik } from "formik";
 import UpdateTitleProduction from "./UpdateTitleProduction/UpdateTitleProduction";
 import UpdateAuthorDatePrice from "./UpdateAuthorDatePrice/UpdateAuthorDatePrice";
 import SummaryTargetImageSrc from "./SummaryTargetImageSrc/SummaryTargetImageSrc";
+import { updateBook } from "../../utils/puts";
+import { useParams } from "react-router-dom";
 
-const UpdateModal = ({ book }) => {
+const UpdateModal = ({ book, setSingleBook }) => {
+  const {id} = useParams()
   const theme = useSelector((state) => state.theme.theme);
-  const { id, title, production, summary, date, author, price, imageSrc, src } =
+  const { title, production, summary, date, author, price, imageSrc, src } =
     book || {};
 
   const {
@@ -30,8 +33,17 @@ const UpdateModal = ({ book }) => {
       imageSrc,
       src,
     },
-    onSubmit: (values, bag) => {
-      console.log(values);
+    onSubmit: async (values, bag) => {
+      const response = await updateBook(id, values)
+      if (response.status == 200 || response.status == 201) {
+        setSingleBook(values)
+      }
+      else if (response.message) {
+        console.log('An error was encountered during the update...')
+      }
+      else {
+        console.log('The update could not be performed...')
+      }
       bag.setSubmitting(false);
     },
   });
