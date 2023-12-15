@@ -1,15 +1,15 @@
 {
   "books": [
     {
-      "id": 1,
       "title": "Paranın Psikolojisi",
       "production": "Scala Yayıncılık",
-      "author": "Morgan Housel",
       "summary": "Para konusunda başarılı olmak, mutlaka bilgiyle ve bilgili olmakla ilgili bir mesele değildir. Nasıl davrandığınızla ilgilidir. Üstelik davranışı öğretmek zordur; gerçekten zeki insanlara bile. Para yönetimi, yatırım ve kurumsal karar alma süreçlerinin genelde çok sayıda matematik hesabı içerdiği, ne yapacağınızı net bir biçimde ortaya koyan veriler ve formüller temelinde hareket etmeyi gerektirdiği düşünülür. Fakat gerçek dünyada insanlar finansla ilgili kararlar alırken sadece tablolara bakmaz. Finansal kararlar genellikle sofrada veya bir toplantı odasında, kişinin kendi hayat hikâyesinin, ona özgü dünya görüşünün, egonun, kibirin, pazarlamanın ve bazı tuhaf motivasyon unsurlarının bir araya geldiği ortamlarda alınır. Ödüllü yazar Morgan Housel Paranın Psikolojisi’nde, insanların paraya ilişkin düşünce biçimlerini ele alan 19 kısa hikâyeye yer veriyor ve hayatın en önemli yönlerinden biri olan para konusunu nasıl daha iyi anlayabileceğimize dair önemli dersler sunuyor.",
+      "author": "Morgan Housel",
       "date": "2022-03-17",
       "price": 240,
       "imageSrc": "https://img.kitapyurdu.com/v1/getImage/fn:11477632/wh:true/wi:220",
-      "src": "https://www.kitapyurdu.com/kitap/paranin-psikolojisi/598866.html"
+      "src": "https://www.kitapyurdu.com/kitap/paranin-psikolojisi/598866.html",
+      "id": 1
     },
     {
       "title": "Gece Yarısı Kütüphanesi",

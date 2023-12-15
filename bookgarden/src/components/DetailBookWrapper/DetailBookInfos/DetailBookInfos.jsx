@@ -1,12 +1,20 @@
 import Button from "../../../common/Button/Button";
 
 /* eslint-disable react/prop-types */
-const DetailBookInfos = ({ date, title, summary, production, src }) => {
+const DetailBookInfos = ({ date, title, summary, price, production, src }) => {
   const formattedDate = new Date(date).toLocaleDateString("tr-TR", {
     day: "numeric",
     month: "numeric",
     year: "numeric",
   });
+
+  const styleButton = {
+    bordervalue: "1px solid #333333",
+    buttonClassName: "rounded-pill",
+    textcolor: "#FFFFFF",
+    buttonpadding: ".5rem 1.5rem",
+    buttonType: "button",
+  };
   return (
     <div className="col-md-8 col-12">
       {date && (
@@ -24,6 +32,12 @@ const DetailBookInfos = ({ date, title, summary, production, src }) => {
         </div>
       )}
 
+      {price && (
+        <div className="py-4 d-flex align-items-center justify-content-end">
+          Price: <span className="fs-3 ms-2 fst-italic">{price}</span><span className="fs-4 fst-italic">$</span>
+        </div>
+      )}
+
       {production && (
         <div className="border-top py-3 d-flex justify-content-center">
           Production: <span className="ms-2">{production}</span>
@@ -31,18 +45,23 @@ const DetailBookInfos = ({ date, title, summary, production, src }) => {
       )}
 
       {src && (
-        <div className="d-flex justify-content-md-end justify-content-center">
+        <div className="d-flex justify-content-around">
           <Button
             title="Go to Site"
             backgroundcolor="#C27B7F"
-            borderradius="12px"
-            bordervalue="none"
-            textcolor="#FFFFFF"
-            buttonpadding=".63rem 1.8rem"
             hoverbackgroundcolor="#C47562"
             buttonOnClick={() => window.open(src, "_blank")}
-            buttonType="button"
-          ></Button>
+            {...styleButton}
+          />
+          <Button
+            backgroundcolor="#FFA192"
+            hoverbackgroundcolor="#FF7F6B"
+            textcolor="#FFFFFF"
+            title="Update Book"
+            dataBsToggle="modal"
+            dataBsTarget="#updateBookModal"
+            {...styleButton}
+          />
         </div>
       )}
     </div>

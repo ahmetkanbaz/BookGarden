@@ -8,16 +8,16 @@ import FilterItems from "../../components/FilterItems/FilterItems";
 const AllBooks = () => {
   const dispatch = useDispatch();
   const books = useSelector((state) => state.books.books);
-
-  const [filteredBooks, setFilteredBooks] = useState(books);
-
+  
   const [search, setSearch] = useState();
   const [sort, setSort] = useState();
-
+  
   useEffect(() => {
     dispatch(getAllBooks());
   }, []);
 
+  const [filteredBooks, setFilteredBooks] = useState(books);
+  
   useEffect(() => {
     let tempBooks = [...books];
 
